@@ -1,0 +1,15 @@
+# Core dependency: nxp-mcp-shared from the mcp-core GitHub release (tag v2.0.0).
+# Must stay inside the range required by packages/mcp_freemaster (>=2.0.0.dev0,<3).
+nxp-mcp-shared @ https://github.com/nxp-agentic-ai/mcp-core/releases/download/v2.0.0/nxp_mcp_shared-2.0.0-py3-none-any.whl
+
+# Optional (mcp-core): gateway mode and kb_search. Uncomment to enable.
+# nxp-mcp-gateway @ https://github.com/nxp-agentic-ai/mcp-core/releases/download/v2.0.0/nxp_mcp_gateway-2.0.0-py3-none-any.whl
+# nxp-mcp-knowledge @ https://github.com/nxp-agentic-ai/mcp-core/releases/download/v2.0.0/nxp_mcp_knowledge-2.0.0-py3-none-any.whl
+
+# FreeMASTER MCP server as an editable install.
+# Registers its nxp.mcp.servers entry-point (discovered by the gateway, if installed).
+-e packages/mcp_freemaster
+
+# Build tools (scripts/build_modules.py)
+build
+twine
